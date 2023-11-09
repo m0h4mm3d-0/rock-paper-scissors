@@ -1,2 +1,3 @@
 # rock-paper-scissors
-lil js game
+lil JavaScript game, testing what I've learned so far.
+
