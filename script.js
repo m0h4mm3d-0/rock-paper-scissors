@@ -1,4 +1,5 @@
 
+
 function getComputerChoice() {
 	let choices = ["Rock", "Paper", "Scissors"];
 	let choice = choices[Math.floor(Math.random()*3)];
@@ -21,7 +22,14 @@ function playRound(playerSelection, computerSelection) {
 	} else return "Draw!";
 }
 
-const playerSelection = prompt("make a choice: ").toLowerCase();
-const computerSelection = getComputerChoice().toLowerCase();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+	for (let i = 0; i <= 5; i++) {
+		const playerSelection = prompt("Rock, Paper, Scissors?: ").toLowerCase();
+		const computerSelection = getComputerChoice().toLowerCase();
+		console.log(computerSelection);
+		console.log(playRound(playerSelection, computerSelection));
+		
+	}
+}
+
+game();
