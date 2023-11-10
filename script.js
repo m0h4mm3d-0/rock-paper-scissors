@@ -12,8 +12,12 @@ function playRound(playerSelection, computerSelection) {
 	} else if (playerSelection === "rock" && computerSelection === "scissors" ||
 		playerSelection === "paper" && computerSelection === "rock" ||
 		playerSelection === "scissors" && computerSelection === "paper") {
+		playerScore++;
 		return "you Win!";
-	} else return "you Lose!";	
+	} else {
+		computerScore++;
+		return "you Lose!";	
+	}
 }
 
 
@@ -23,7 +27,7 @@ function game() {
 		const computerSelection = getComputerChoice().toLowerCase();
 		console.log(computerSelection);
 		console.log(playRound(playerSelection, computerSelection));
-
+		console.log(playerScore, "-", computerScore);
 	}
 }
 
