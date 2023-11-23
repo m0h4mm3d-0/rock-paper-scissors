@@ -7,17 +7,19 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+	let log = ""; 
 	if (playerSelection === computerSelection) {
-		return "Tie!";
+		log = "Tie!";
 	} else if (playerSelection === "rock" && computerSelection === "scissors" ||
 		playerSelection === "paper" && computerSelection === "rock" ||
 		playerSelection === "scissors" && computerSelection === "paper") {
 		playerScore++;
-		return (`you Win! ${playerSelection} beats ${computerSelection}`);
+		log = (`you Win! ${playerSelection} beats ${computerSelection}`);
 	} else {
 		computerScore++;
-		return (`you Lose! ${computerSelection} beats ${playerSelection}`);	
+		log = (`you Lose! ${computerSelection} beats ${playerSelection}`);	
 	}
+	return log;
 }
 
 
