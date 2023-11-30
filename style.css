@@ -1,0 +1,46 @@
+body {
+  background-color: #0b405a;
+  /*display: flex;*/
+
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  border: 10px solid #dfa927;
+  border-radius: 12px;
+  padding: 10px;
+}		
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  border: 10px solid #d05228;
+  border-radius: 13px;
+  padding: 10px;
+}
+
+.result {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: auto;
+  width: auto;
+  border: 10px solid #e1bebe;
+  border-radius: 13px;
+  flex-direction: column;
+  padding: 10px;
+}
