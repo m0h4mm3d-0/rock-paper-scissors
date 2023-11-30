@@ -4,7 +4,8 @@ const rockbtn = document.querySelector('.rock');
 const paperbtn = document.querySelector('.paper');
 const scissorsbtn = document.querySelector('.scissors');
 const resultDiv = document.querySelector('.result');
-
+const playerScoreSpan = document.querySelector('.player-score');
+const computerScoreSpan = document.querySelector('.computer-score');
 
 function getComputerChoice() {
 	let choices = ["Rock", "Paper", "Scissors"];
@@ -38,10 +39,16 @@ const winnerCheck = (playerScore, computerScore) => {
 	return resultDiv.appendChild(h2);
 }
 
+const updateScore = (playerScore, computerScore) => {
+	playerScoreSpan.innerHTML = `Player Score: ${playerScore}, `;
+	computerScoreSpan.innerHTML = `Computer Score: ${computerScore}`;
+}
+
 rockbtn.addEventListener('click', () => {
 	const computerSelection = getComputerChoice().toLowerCase();
 	const playerSelection = 'rock';
 	playRound(playerSelection, computerSelection);
+	updateScore(playerScore, computerScore);
 	winnerCheck(playerScore, computerScore);
 })
 
@@ -49,6 +56,7 @@ paperbtn.addEventListener('click', () => {
 	const computerSelection = getComputerChoice().toLowerCase();
 	const playerSelection = 'paper';
 	playRound(playerSelection, computerSelection);
+	updateScore(playerScore, computerScore);
 	winnerCheck(playerScore, computerScore);
 })
 
@@ -56,6 +64,7 @@ scissorsbtn.addEventListener('click', () => {
 	const computerSelection = getComputerChoice().toLowerCase();
 	const playerSelection = 'scissors';
 	playRound(playerSelection, computerSelection);
+	updateScore(playerScore, computerScore);
 	winnerCheck(playerScore, computerScore);
 })
 
